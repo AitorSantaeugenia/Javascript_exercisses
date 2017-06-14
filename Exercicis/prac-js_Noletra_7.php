@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD> <TITLE>EX_7</TITLE>
-	<META http-equiv=Content-Type content="text/html;>
+	<META http-equiv=Content-Type content="text/html";>
 	<META content="Microsoft FrontPage 4.0" name=GENERATOR>
 	<meta charset=utf-8>
 </HEAD>
@@ -31,26 +31,26 @@
 
 <script>
 	//var numero = esMayuscula(prompt("Introduce una cadena"));
-	
+
 	function esMayuscula(cadena){
 		if(cadena == cadena.toUpperCase()){
-			return("La cadena " + " ' " + cadena + " ' " + " es mayúscula");
+			return("La cadena " + " ' " + cadena + " ' " + " es mayï¿½scula");
 		}else if(cadena == cadena.toLowerCase()){
-			return("La cadena " + " ' " + cadena + " ' " + " es minúscula");
+			return("La cadena " + " ' " + cadena + " ' " + " es minï¿½scula");
 		}
 	}
-	
+
 	alert(esMayuscula("OBJETO VOLADOR NO IDENTIFICADO"));
 	alert(esMayuscula("en un lugar de la mancha"));
 	alert(esMayuscula("en un lugar de menorca"));
-		
-	
+
+
 </script>
 
 <h1 style="text-align:center; font-family:monospace;";> Exercici 7 </h1>
 
 <div class="body_sp" style="text-align:center";>
-	
+
 </div>
 
 

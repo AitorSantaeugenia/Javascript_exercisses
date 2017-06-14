@@ -1,9 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <head> <TITLE>EX_13</TITLE>
-	<META http-equiv=Content-Type content="text/html;>
+	<META http-equiv=Content-Type content="text/html";>
 	<META content="Microsoft FrontPage 4.0" name=GENERATOR>
-	
+
 	<meta charset="utf-8">
 
 
@@ -14,68 +14,97 @@
 	</style>
 
 	<script type="text/javascript">
-		function alCambiar(){
+	function alCambiar(evt)
+	{
 			var x = document.getElementById("number1").value;
+			var z = document.getElementById("spanAdverten");
 			//alert(x);
-			if(x.length>=9){
-				alert("Te has pasado con la longitud");
-				var z = document.getElementById("spanAdverten");
-				z.style.backgroundColor = "red";
-			}
-			
-			var num1 = x[0];
-			var num2 = x[1];
-			var num3 = x[2];
-			var num4 = x[3];
-			var num5 = x[4];
-			var num6 = x[5];
-			var num7 = x[6];
-			var num8 = x[7];
-			
-			var letrasTres = num1+num2+num3;
-			//alert(num4);
-			
-			if(!isNaN(num1) || !isNaN(num2) || !isNaN(num3)){
-				alert("Tres primeros digitos no son una letra");
-				var z = document.getElementById("spanAdverten");
-				z.style.backgroundColor = "red";
-			}
-			
-			if(isNaN(num5) || isNaN(num6) || isNaN(num7) || isNaN(num8)){
-				alert("Cuatro ultimos digitos no son numeros");
-				var z = document.getElementById("spanAdverten");
-				z.style.backgroundColor = "red";
-			}
-			
-			if(letrasTres != letrasTres.toUpperCase()){
-				alert("Las tres primeras letras no estan en mayuscula");
-				var z = document.getElementById("spanAdverten");
-				z.style.backgroundColor = "red";
-			}
-			
-			if(num4 != " "){
-					alert("No has dejado espacio en la cuarta posicion");
+
+
+			tecla = evt.keyCode;
+			shift= evt.shiftKey;
+
+			//alert(x.length+' '+tecla + ' ' +shift);
+
+			if(x.length>=8)
+			{
+
+
+
+		}else if(tecla==8){
+
+			}else	if( (x.length==0) || (tecla==16) )
+		{
+
+
+		}else	if( x.length>0 && x.length<=3)
+			{
+
+					if( tecla >= 65 && tecla <=90 && shift){
+							//es una letra mayúscula
+
+							z.style.backgroundColor = "green";
+								z.innerHTML="";
+					}else
+					{
+						//alert("Primera posicion una letra (L) y mayuscula");
+
+						z.style.backgroundColor = "red";
+						z.innerHTML="No es una letra mayúscula";
+
+						 document.getElementById("number1").value=document.getElementById("number1").value.substring(0,x.length-1);
+					}
+
+			}else if(x.length==4)
+			{
+
+					if( tecla == 32)
+					{
+
+						 	z.innerHTML="";
+						z.style.backgroundColor = "green";
+					}	else
+					 {
+						z.style.backgroundColor = "red";
+						z.innerHTML="se esperaba un espacio";
+						document.getElementById("number1").value=document.getElementById("number1").value.substring(0,x.length-1);
+					}
+
+			}else if ( x.length>=5 &&  x.length<=8 )
+			{
+
+
+						if((tecla >= 48 && tecla <=57) && !shift)
+						{
+							z.innerHTML="";
+							z.style.backgroundColor = "green";
+					}else
+					{
+							z.style.backgroundColor = "red";
+						  z.innerHTML="se esperaba un número";
+							document.getElementById("number1").value=document.getElementById("number1").value.substring(0,x.length-1);
+					}
+
 			}
 
 
-			
+	}
 
-			
-			
-		}
-	</script>
-	
+
+
+</script>
+
 </head>
 
 <body>
 <h1> EJERCICIO 13 </h1>
 	<p>Introduce numeros y letras en formatos: LLL NNNN (ojo con el espacio)</p>
 	<p> Siendo L = LETRA y N = NUMERO </p>
-	<input type="text" name="number1" id="number1" value="asd 1989" onchange="alCambiar(this)">
+	<input type="text" name="number1" id="number1" maxlength="8" onkeyup="alCambiar(event);">
 	<br/><br/><br/>
 	<span id="spanAdverten" class="spanAdvertencia1" style="border:1px solid green; background-color:green; color:white;"> ERROR </span>
 
-	
+
 </body>
 
 </HTML>

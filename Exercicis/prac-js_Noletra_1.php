@@ -5,12 +5,12 @@
 
 <!-- INICI HEAD -->
 	<head>
-	
+
 		<!-- INIC SCRIPTS -->
 		<script type="text/javascript">
 			<!--var name=prompt("Introduce tu nombre, por favor.","nombre");
 
-			var today = new Date ()
+			var today = new Date ();
 			var hrs = today.getHours();
 			var saludo = '';
 			if(hrs<12){
@@ -20,20 +20,20 @@
 			}else{
 				saludo = 'Buenas noches';
 			}
-			
-			document.write(saludo);			
+
+			document.write(saludo);
 			// -->
 			</script>
-		
+
 	</head>
-<!-- FI    HEAD -->	
+<!-- FI    HEAD -->
 
 
 
 <!-- INICI BODY -->
 	<body>
 
-		
+
 	</body>
 <!-- FI BODY -->
 

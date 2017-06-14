@@ -5,24 +5,24 @@
 
 <!-- INICI HEAD -->
 	<head>
-	
+
 		<!-- INIC SCRIPTS -->
 		<script type="text/javascript">
 			<!--var name=prompt("Introduce tu nombre, por favor.","nombre");
-				function cambiaColor(){ 
+				function cambiaColor(){
 					document.getElementById("prueba").style.background='#EECCCC';
 				}
-				
-				
+
+
 			// -->
 		</script>
-		
+
 		<style>
-			
+
 		</style>
-		
+
 	</head>
-<!-- FI    HEAD -->	
+<!-- FI    HEAD -->
 
 <!-- INICI BODY -->
 	<body>
