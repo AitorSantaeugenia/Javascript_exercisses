@@ -1,2 +1,2 @@
-# Javascript_exercisses
-Javascript weird Exercisses
+# Javascript_exercises
+Javascript Exercises
